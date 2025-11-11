@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 목록</title> </head>
+<body>
+    <h2>회원 목록</h2> <a href="/add">회원 추가</a> <table border="1" cellpadding="5"> <tr>
+            <th>ID</th> <th>이름</th> <th>이메일</th> <th>도시</th>
+            <th>관리</th>
+        </tr>
+        {% for m in members %} <tr>
+            <td>{{ m.id }}</td> <td>{{ m.name }}</td> <td>{{ m.email }}</td> <td>{{ m.city }}</td> <td>
+                <a href="/edit/{{ m.id }}">수정</a> |
+                <a href="/delete/{{ m.id }}">삭제</a>
+            </td>
+        </tr>
+        {% endfor %} </table>
+</body>
+</html>

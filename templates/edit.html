@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> <title>회원 수정</title>
+    </head>
+<body>
+    <h2>회원 수정</h2>
+    <form method="post"> 이름: <input type="text" name="name" value="{{ member.name }}"> <br>
+        이메일: <input type="text" name="email" value="{{ member.email }}"> <br> 도시: <input type="text" name="city" value="{{ member.city }}"> <br> <input type="submit" value="수정"> </form>
+    <a href="/">목록으로</a> </body>
+</html>

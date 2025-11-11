@@ -1,0 +1,17 @@
+# Python
+pycache/
+*.pyc
+*.pyo
+*.pyd
+
+#Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE settings
+.idea/
+.vscode/
+*.swp
+*.swo

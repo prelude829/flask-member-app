@@ -1,0 +1,17 @@
+FROM python:3.11-slim         
+WORKDIR /app    
+#  Python 3.11 경량(base) 이미지 사용
+#  컨테이너 내 작업 디렉터리설정
+
+COPY requirements.txt .        
+RUN pip install --no-cache-dir -r requirements.txt  
+# 의존성파일복사
+# Flask 등 패키지 설치
+
+COPY . .        
+EXPOSE 5000                   
+# 전체 프로젝트파일복사
+# Flask 기본 포트(5000) 개방
+
+CMD ["python", "app.py"]       
+# 컨테이너시작시Flask 앱 실행
